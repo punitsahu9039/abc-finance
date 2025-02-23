@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Calculator } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const LoanCalculator = () => {
@@ -31,30 +30,28 @@ const LoanCalculator = () => {
   };
 
   return (
-    <div className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="py-16 bg-gradient-to-r from-blue-900 to-blue-600 text-white">
+      <div className="max-w-5xl mx-auto px-6 lg:px-8">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Personal Loan EMI Calculator</h2>
-          <p className="text-gray-600">Calculate your monthly EMI and plan your loan better</p>
+          <h2 className="text-4xl font-bold mb-4">Personal Loan EMI Calculator</h2>
+          <p className="text-gray-200">Plan your loan with accurate EMI calculations</p>
         </motion.div>
 
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="bg-white rounded-xl shadow-lg p-8"
+          className="bg-white text-gray-900 rounded-xl shadow-lg p-8"
         >
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Loan Amount (₹)
-                </label>
+                <label className="block text-sm font-medium mb-2">Loan Amount (₹)</label>
                 <input
                   type="range"
                   min="50000"
@@ -62,15 +59,13 @@ const LoanCalculator = () => {
                   step="10000"
                   value={loanAmount}
                   onChange={(e) => setLoanAmount(Number(e.target.value))}
-                  className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+                  className="w-full h-2 bg-gray-300 rounded-lg cursor-pointer"
                 />
                 <div className="mt-2 text-lg font-semibold">₹{loanAmount.toLocaleString()}</div>
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Tenure (Months)
-                </label>
+                <label className="block text-sm font-medium mb-2">Tenure (Months)</label>
                 <input
                   type="range"
                   min="12"
@@ -78,15 +73,13 @@ const LoanCalculator = () => {
                   step="12"
                   value={tenure}
                   onChange={(e) => setTenure(Number(e.target.value))}
-                  className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+                  className="w-full h-2 bg-gray-300 rounded-lg cursor-pointer"
                 />
                 <div className="mt-2 text-lg font-semibold">{tenure} months</div>
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Interest Rate (% p.a.)
-                </label>
+                <label className="block text-sm font-medium mb-2">Interest Rate (% p.a.)</label>
                 <input
                   type="range"
                   min="10.49"
@@ -94,7 +87,7 @@ const LoanCalculator = () => {
                   step="0.01"
                   value={interestRate}
                   onChange={(e) => setInterestRate(Number(e.target.value))}
-                  className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+                  className="w-full h-2 bg-gray-300 rounded-lg cursor-pointer"
                 />
                 <div className="mt-2 text-lg font-semibold">{interestRate}%</div>
               </div>
@@ -128,7 +121,7 @@ const LoanCalculator = () => {
                 <motion.button 
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition-colors w-full"
+                  className="bg-blue-700 text-white px-8 py-3 rounded-full hover:bg-blue-800 transition-colors w-full"
                 >
                   Apply Now
                 </motion.button>
