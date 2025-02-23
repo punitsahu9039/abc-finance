@@ -31,7 +31,7 @@ const Footer = () => {
             <ul className="mt-2 space-y-2">
               <li className="flex items-center">
                 <Phone className="h-4 w-4 mr-2" />
-                <a href="tel:1800-123-4567" className="hover:text-blue-400">+91 704-977-6747 , +91 934-047-9217</a>
+                <a href="tel:1800-123-4567" className="hover:text-blue-400">0704-977-6747 , 0934-047-9217</a>
               </li>
               <li className="flex items-center">
                 <Mail className="h-4 w-4 mr-2" />
