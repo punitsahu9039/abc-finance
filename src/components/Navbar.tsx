@@ -31,7 +31,7 @@ const Navbar = () => {
             <a href="#" className="hover:text-blue-400 transition-colors">Home Loan</a>
             <a href="tel:1800-123-4567" className="flex items-center hover:text-blue-400 transition-colors">
               <Phone className="h-4 w-4 mr-2" />
-              <span>1800-123-4567</span>
+              <span>+91 704-977-6747 , +91 934-047-9217</span> 
             </a>
             <motion.button 
               whileHover={{ scale: 1.05 }}

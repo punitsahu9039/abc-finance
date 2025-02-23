@@ -7,6 +7,7 @@ import Features from "./components/Features";
 import EligibilitySection from "./components/EligibilitySection";
 import DocumentsSection from "./components/DocumentsSection";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import ApplicationForm from "./components/ApplicationForm"; // Import ApplicationForm
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
               <Features />
               <EligibilitySection />
               <DocumentsSection />
+              <Footer />  
             </>
           } />
           <Route path="/application-form" element={<ApplicationForm />} /> {/* Correctly placed */}
